@@ -8,32 +8,17 @@ export default function Hero({ onMenuToggle }) {
       backgroundPosition: 'center', 
       color: '#fff', 
       textAlign: 'center', 
-      padding: '5rem 1rem', 
-      position: 'relative'
+      minHeight: '100vh', // Ocupa toda la pantalla
+      padding: '0 1rem',  // Solo padding horizontal
+      position: 'relative',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
     }}>
       <div style={{ position:'absolute', top:0, left:0, width:'100%', height:'100%', backgroundColor:'rgba(0,0,0,0.6)' }} />
       
-      {/* Botón de menú - NO fixed */}
-      <button 
-        className="menu-toggle" 
-        onClick={onMenuToggle} 
-        style={{
-          position: 'absolute',
-          top: '20px',
-          left: '20px',
-          zIndex: 1000,
-          background: 'none',
-          border: 'none',
-          color: 'white',
-          fontSize: '1.8rem',
-          cursor: 'pointer'
-        }}
-      >
-        ☰
-      </button>
-      
       {/* Contenido del hero */}
-      <div className="hero-content" style={{ position:'relative', maxWidth:'800px', margin:'0 auto' }}>
+      <div className="hero-content hero-content-anim" style={{ position:'relative', maxWidth:'800px', margin:'0 auto' }}>
         <h1 style={{ fontSize:'3rem', marginBottom:'1.5rem' }}>Explorando la Teología Reformada</h1>
         <p style={{ fontSize:'1.2rem', marginBottom:'2rem', color:'var(--color-light)' }}>Un repositorio de artículos, libros y recursos para profundizar en la comprensión de las doctrinas reformadas y la fe histórica de la iglesia.</p>
         

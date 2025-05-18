@@ -1,105 +1,78 @@
-import React from 'react';
-import Link from 'next/link';
+import React, { useEffect, useState, useRef } from 'react'
+import Link from 'next/link'
 
 const routes = {
-  'Inicio': '/',
-  'Artículos': '/articulos',
-  'Libros': '/libros',
-  'Estudios': '/estudios',
-  'Recursos': '/recursos',
+  Inicio: '/',
+  Artículos: '/articulos',
+  Libros: '/libros',
+  Estudios: '/estudios',
+  Recursos: '/recursos',
   'Acerca de': '/acerca'
-};
+}
 
-export default function SideMenu({ isOpen, onClose }) {
+export default function SideMenu({ isOpen, onOpen, onClose }) {
+  const [mounted, setMounted] = useState(false)
+  const menuRef = useRef(null)
+  
+  useEffect(() => {
+    setMounted(true)
+    
+    // Nueva función de scroll que aplica una variable CSS en lugar de una clase
+    const handleScroll = () => {
+      requestAnimationFrame(() => {
+        if (!menuRef.current) return
+        
+        // Calcular la opacidad basada en el scroll (max 1)
+        const scrollY = window.scrollY
+        const maxScroll = 50 // Valor en px donde la opacidad llega a 1
+        const opacity = Math.min(1, scrollY / maxScroll)
+        
+        // Aplicar la opacidad como variable CSS
+        menuRef.current.style.setProperty('--menu-bg-opacity', opacity)
+        
+        // También podemos aplicar blur proporcional
+        const blur = opacity * 6 // máximo 6px de blur
+        menuRef.current.style.setProperty('--menu-blur', `${blur}px`)
+      })
+    }
+    
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <>
-      <div 
-        className={`slide-menu ${isOpen ? 'open' : ''}`} 
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: isOpen ? 0 : '-300px',
-          width: '300px',
-          height: '100vh',
-          backgroundColor: 'var(--color-primary)',
-          backgroundImage: 'radial-gradient(circle,rgba(79, 28, 0, 1) 0%, rgba(28, 11, 1, 1) 80%)',
-          zIndex: 1001,
-          transition: 'left 0.3s ease-in-out',
-          paddingTop: '70px',
-          boxShadow: isOpen ? '2px 0 10px rgba(0,0,0,0.3)' : 'none'
-        }}
-      >
+      {mounted && (
         <button
-          className="close-menu"
-          onClick={onClose}
-          style={{
-            position: 'absolute',
-            top: '20px',
-            right: '20px',
-            background: 'none',
-            border: 'none',
-            color: 'white',
-            fontSize: '1.5rem',
-            cursor: 'pointer',
-            zIndex: 1002,
-            padding: '5px',
-            width: '30px',
-            height: '30px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            borderRadius: '50%',
-            transition: 'background-color 0.2s'
-          }}
-          aria-label="Cerrar menú"
+          className="hamburger"
+          aria-label="Abrir menú"
+          onClick={onOpen}
+          style={{ display: isOpen ? 'none' : undefined }}
         >
+          ☰
+        </button>
+      )}
+
+      <nav 
+        ref={menuRef}
+        className={`slide-menu${isOpen ? ' open' : ''}`}
+      >
+        <button className="close-btn" aria-label="Cerrar menú" onClick={onClose}>
           ✕
         </button>
-        
-        <div style={{ padding: '0 1rem', marginBottom: '2rem' }}>
-          <Link href="/" style={{ fontSize: '1.8rem', fontWeight: 700, color: '#fff', textDecoration: 'none' }}>
-            Sola Scriptura
-          </Link>
-        </div>
-        <ul style={{ listStyle: 'none', padding: 0 }}>
-          {Object.entries(routes).map(([item, path]) => (
-            <li key={item} style={{ margin: '0.5rem 0' }}>
-              <Link
-                href={path}
-                style={{ 
-                  color: '#fff', 
-                  fontFamily: 'var(--font-sans)', 
-                  fontWeight: 600, 
-                  fontSize: '1rem', 
-                  textTransform: 'uppercase', 
-                  letterSpacing: '0.5px',
-                  display: 'block',
-                  padding: '0.75rem 1.5rem',
-                  borderBottom: '1px solid rgba(255,255,255,0.1)',
-                  textDecoration: 'none'
-                }}
-              >
-                {item}
+        <Link href="/" className="logo">Sola Scriptura</Link>
+        <ul className="menu-list">
+          {Object.entries(routes).map(([label, path]) => (
+            <li key={label}>
+              <Link href={path} className="menu-link">
+                {label}
               </Link>
             </li>
           ))}
         </ul>
-      </div>
-      {isOpen && (
-        <div 
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'rgba(0,0,0,0.5)',
-            zIndex: 1000,
-            transition: 'background-color 0.3s ease'
-          }}
-          onClick={onClose}
-        />
-      )}
+      </nav>
+
+      {isOpen && <div className="backdrop" onClick={onClose}></div>}
     </>
-  );
+  )
 }
