@@ -1,4 +1,14 @@
 import React from 'react';
+import Link from 'next/link';
+
+const routes = {
+  'Inicio': '/',
+  'Artículos': '/articulos',
+  'Libros': '/libros',
+  'Estudios': '/estudios',
+  'Recursos': '/recursos',
+  'Acerca de': '/acerca'
+};
 
 export default function SideMenu({ isOpen, onClose }) {
   return (
@@ -47,13 +57,15 @@ export default function SideMenu({ isOpen, onClose }) {
         </button>
         
         <div style={{ padding: '0 1rem', marginBottom: '2rem' }}>
-          <a href="/" style={{ fontSize: '1.8rem', fontWeight: 700, color: '#fff' }}>Sola Scriptura</a>
+          <Link href="/" style={{ fontSize: '1.8rem', fontWeight: 700, color: '#fff', textDecoration: 'none' }}>
+            Sola Scriptura
+          </Link>
         </div>
         <ul style={{ listStyle: 'none', padding: 0 }}>
-          {['Inicio','Artículos','Libros','Estudios','Recursos','Acerca de'].map(item => (
+          {Object.entries(routes).map(([item, path]) => (
             <li key={item} style={{ margin: '0.5rem 0' }}>
-              <a 
-                href={`/${item.toLowerCase().replace(/ /g,'')}`} 
+              <Link
+                href={path}
                 style={{ 
                   color: '#fff', 
                   fontFamily: 'var(--font-sans)', 
@@ -63,11 +75,12 @@ export default function SideMenu({ isOpen, onClose }) {
                   letterSpacing: '0.5px',
                   display: 'block',
                   padding: '0.75rem 1.5rem',
-                  borderBottom: '1px solid rgba(255,255,255,0.1)'
+                  borderBottom: '1px solid rgba(255,255,255,0.1)',
+                  textDecoration: 'none'
                 }}
               >
                 {item}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
