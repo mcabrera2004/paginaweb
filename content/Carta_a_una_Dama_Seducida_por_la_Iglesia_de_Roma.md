@@ -1,15 +1,15 @@
 ---
 title: "Carta a una Dama Seducida por la Iglesia de Roma"
-date: "2025-05-12"
-category: "Protestantismo"
+date: "2023-03-05"
+category: "Catolicismo Romano"
 author: "Martín López"
-excerpt: "Deseaba hablar personalemente con usted sobre este asunto que le afecta, pero nuestras ocupaciones nos lo impiden, lo q...."
+excerpt: "Deseaba hablar personalmente con usted sobre este asunto que le afecta, pero nuestras ocupaciones nos lo impiden, lo que lamentablemente le obliga a leer esta larga carta. Sin embargo, espero que la reciba con buena disposición, ya que la escribo con gran respeto por su persona y su alma."
+featured: true
+image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8PErTmw7eTuSou33pALfc9SGn2Ezjjv1gGU1ZvOJdRB9jheDKooqQNp0fS5K7UJPITF8&usqp=CAU"
 ---
 
-Deseaba hablar personalemente con usted sobre este asunto que le afecta, pero nuestras ocupaciones nos lo impiden, lo que lamentablemente le obliga a leer esta larga carta. Sin embargo, espero que la reciba con buena disposición, ya que la escribo con gran respeto por su persona y su alma. Debo confesar que me preocupó saber que había abandonado la Iglesia protestante y se había separado de quienes siempre le han tratado con amor y caridad, renunciando a la iglesia en la que fue bautizada y en la que vivió piadosamente durante tantos tiempo. Todo esto pareciera, sin ninguna razón suficiente, sin necesidad o escándalo justo. Mas, si de algo estoy seguro es que tenemos la verdad de nuestro lado, y por ello no estamos dispuestos cambiar de la verdad a la mentira, cambiar de una Iglesia reformada a una Iglesia que no será reformada. 
+Deseaba hablar personalmente con usted sobre este asunto que le afecta, pero nuestras ocupaciones nos lo impiden, lo que lamentablemente le obliga a leer esta larga carta. Sin embargo, espero que la reciba con buena disposición, ya que la escribo con gran respeto por su persona y su alma. Debo confesar que me preocupó saber que había abandonado la Iglesia protestante y se había separado de quienes siempre le han tratado con amor y caridad, renunciando a la iglesia en la que fue bautizada y en la que vivió piadosamente durante tantos tiempo. Todo esto pareciera, sin ninguna razón suficiente, sin necesidad o escándalo justo. Mas, si de algo estoy seguro es que tenemos la verdad de nuestro lado, y por ello no estamos dispuestos cambiar de la verdad a la mentira, cambiar de una Iglesia reformada a una Iglesia que no será reformada. 
 Por eso permiteme, te ruego, considerar por ti esta cuestión, te pregunto qué fue lo que encontraste mal o insuficiente en la doctrina, liturgia y disciplina de la Iglesia protestante, ¿hubo alguna falta, alguna enseñanza errónea o peligrosa, o algún defecto que te llevó a abandonarla?
-
->fadsfadfasasf
 
 Respecto a su doctrina, la Iglesia protestante profesa la creencia en todo lo que está escrito en el Antiguo y Nuevo Testamento, en los tres credos (apostólico, niceno y de atanasio), en todo lo que se decretó en los cuatro concilios generales y en todo lo que se condenó en ellos. Nuestras iglesias han declarado oficialmente que todo lo que se opone a estas creencias es herejía, tanto como toda la gente de fe que vivió y murió en esta creencia, incluyendo santos y mártires, quienes negaron la comunión a quienes no profesaban esta fe. Esta es la fe católica, como se establece en el credo de atanasio, y a menos que una compañía de hombres tenga poder para alterar la fe de Dios, quienes vivan y mueran en esta fe, son totalmente católicos y cristianos. Si vivimos de acuerdo con nuestra creencia, la Iglesia protestante no tiene nada que le falta para preservar la fe, ya que tiene la misma fe que la Iglesia Católica tuvo durante los primeros siglos de la cristiandad.
 
@@ -40,4 +40,3 @@ De modo que, a menos que prefieras el peligro a la seguridad, la tentación de l
 No te incomodaré más por el momento, pero me gustaría pedirte que consideres cuidadosamente estas cosas que te he escrito con un espíritu amable. Mientras tanto, estaré orando a Dios para que abra tu corazón y tu mente, y te permita regresar de donde has caído, arrepentirte y hacer lo que debes hacer. Todo esto es lo que sinceramente deseo para ti.
 
 Con afecto, Josue.
-~
