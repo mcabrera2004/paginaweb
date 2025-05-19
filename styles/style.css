@@ -204,7 +204,7 @@ body.articulo-bg {
 
 /* BOTÓN HAMBURGUESA */
 .hamburger {
-  position: fixed;
+  position: absolute;
   top: 18px; left: 18px;
   z-index: 1100;
   background: none; border: none;
@@ -215,7 +215,7 @@ body.articulo-bg {
   display: none;
 }
 @media (max-width: 899px) {
-  .hamburger { display: flex; }
+  .hamburger { display: flex; position: absolute; }
 }
 
 /* BOTÓN CERRAR */
